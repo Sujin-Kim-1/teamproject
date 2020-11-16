@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'products/style.css' %}" type="text/css" />
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+<h1>menumain.html : 메뉴 메인</h1>
+<h2> 코너 3개 추가하기 (추천상품목록 , 관심상품목록, 보유상품 목록) </h2>
+
+  <a href="{% url 'products:new' %}">글  쓰  기</a>
+</div>
+
+
+
+{% endblock %}

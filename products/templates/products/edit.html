@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'products/style.css'%}" />
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>edit.html : 수정하기 페이지</h1>
+
+ 
+
+    <div class="form-group">
+        <label for="image">이미지</label>
+        <input type="file" class="form-control-file" id="image" name="image" />
+      </div>
+
+      {% if product.image %}
+      <div>
+        <img src="{{ product.image.url }}" alt="Product Image" />
+      </div>
+    {% endif %}   
+
+
+    <form action="{% url 'products:update' product.id %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="body">메모</label>
+        <textarea class="form-control" id="body" cols="40" rows="10" name="body">{{ product.body }}</textarea>
+      </div>
+
+    
+      <button type="submit" class="btn btn-primary">수정하기</button>
+    </form>
+
+    <a href="{% url 'products:menumain' %}">목록</a>    
+  </div>
+{% endblock %}

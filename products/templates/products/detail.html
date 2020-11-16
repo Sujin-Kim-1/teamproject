@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'products/style.css'%}" />
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>detail.html : 상품 상세</h1>
+
+    <h2> 필요한 상품 상세 정보 추가 하기</h2>
+    <h2>  - </h2>
+    <h2>  - </h2>
+    <div class="form-group">
+        <label for="author">작성자</label>
+        <input readonly class="form-control-plaintext" type="text" name="author" value="{{ product.user.get_username }}" />
+      </div>
+
+    {% if product.image %}
+    <div>
+      <img src="{{ product.image.url }}" alt="Product Image" />
+    </div>
+    
+  {% endif %}
+
+
+    <div class="form-group">
+      <label for="body">메모</label>
+      <textarea readonly class="form-control-plaintext" id="body" cols="40" rows="10" name="body">{{ product.body }}</textarea>
+    </div>
+
+    <div>{{ product.created_at }}</div>
+
+    <a href="{% url 'products:menumain' %}">목록</a>
+    {% if user == product.user %}
+      <a href="{% url 'products:edit' product.id %}">수정하기</a>
+      <a href="{% url 'products:delete' product.id %}">삭제하기</a>
+    {% endif %}
+  </div>
+{% endblock %}
