@@ -8,7 +8,7 @@ class Product(models.Model):
     created_at = models.DateTimeField()
 
 
-    #여기서부터 추가함
+    #여기서부터 추가함 + modelbranch로 작업한것 확인
     GENDER = ( (1, '여성'), (2, '남성') )
     gender = models.CharField(max_length=2, choices=GENDER)
 
