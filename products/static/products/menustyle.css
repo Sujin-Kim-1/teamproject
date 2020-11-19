@@ -1,0 +1,31 @@
+#content1{position: relative; height: 811px;background: #000000;}
+#content .wrap
+#content1 h1{ position: absolute; top:59px;Left:80px; color: #FFFFFF;font-family: Montserrat;font-size: 48px;}
+#content1 .btn_more{position: absolute;right:174px;top: 72px;}
+/* #content1 .recommendation{ top: 200px;left: 121px;} */
+#content1 .recommend_main_cloth{position: absolute; top: 200px;left: 121px;display:inline-block;width: 281px;Height:271.89px;background-color: rgba(201, 189, 189, 0.678);border:0.1px solid black;}
+#content1 .recommend_cloth{width: 281px;Height:271.89px;background-color: rgba(201, 189, 189, 0.678);border:0.1px solid black;}
+
+
+.btn_more{
+    width: 130px;
+    height: 40px;
+    background-color: rgba(248, 248, 247, 0.897);
+    border:2px solid rgb(59, 181, 211);
+    border-radius: 10px;
+    color:black;
+    }
+
+.next{
+    Width :32.5px;height:97px;
+    clear: both;
+    border:0.1px solid #FFFFFF;
+}
+
+#content2{position: relative;height: 811px;background:#FFF;}
+#content2 h1{ position: absolute; top:59px;Left:80px; color: #000;font-family: Montserrat;font-size: 48px;}
+#content2 .btn_more{position: absolute;right:174px;top: 72px;}
+
+#content3{position: relative;height: 811px;background: #000000;}
+#content3 h1{ position: absolute; top:59px;Left:80px; color: #FFFFFF;font-family: Montserrat;font-size: 48px;}
+#content3 .btn_more{position: absolute;right:174px;top: 72px;}
