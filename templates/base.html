@@ -8,32 +8,66 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   {% block style %}
-   {% endblock %}
+  {% endblock %}
 </head>
 
 <body>
-  {% if user.is_authenticated %}
-  <div class="container">
-    <form action="{% url 'accounts:logout' %}" method="POST">
-      {% csrf_token %}
-  
-      {{ user.get_username }}님 환영합니다.
-      <button type="submit" class="btn btn-primary">LOGOUT</button>
-    </form>
-  </div>
-  {% else %}
-  <div class="container">
-    <a href="{% url 'accounts:login' %}">
-      <button type="submit" class="btn btn-primary">LOGIN</button>
-    </a>
+  <nav>
+    <div>
+      <a class="navbar-brand" href="{% url 'products:menumain' %}">cartme</a>
+      <ul>
+        <li><a href="#a">Category</a></li>
+        <li><a href="#a">Style</a></li>
+        <li><a href="#a">Color</a></li>
+        <li><a href="#a">Season</a></li>
+      </ul> 
+      <div id="login">
+        {% if user.is_authenticated %}
+          <div class="container">
+            <form action="{% url 'accounts:logout' %}" method="POST">
+              {% csrf_token %}
 
-    <a href="{% url 'accounts:sign_up' %}">
-      <button type="submit" class="btn btn-primary">SIGN UP</button>
-    </a>
-  </div>
+              {{ user.get_username }}님 환영합니다.
+              <button type="submit" class="btn btn-primary">LOGOUT</button>
+            </form>
+          </div>
+            {% else %}
+            <div class="container">
+              <a href="{% url 'accounts:login' %}">
+              <button type="submit" class="btn btn-primary">LOGIN</button>
+              </a>
+
+              <a href="{% url 'accounts:sign_up' %}">
+              <button type="submit" class="btn btn-primary">SIGN UP</button>
+              </a>
+        </div>
+      </div>
+    
+  </nav>
+  <img id="screen" src="{% static 'image 5.png' %}">
   {% endif %}
   {% block content %}
   {% endblock %}
+  <footer>
+    <div>
+      <ul class="nav">
+        <li>Mobile app</li>
+        <li>Community</li>
+        <li>Company</li>
+        <li>Help desk</li>
+        <li>Blog</li>
+        <li>Resource</li>
+      </ul>
+      <br>
+      
+      <ul class="sns">
+        <li class="icon1"><a href="#a">트위터</a></li>
+        <li class="icon2"><a href="#a">인스타</a></li>
+        <li class="icon3"><a href="#a">페이스북<</a></li>
+      </ul>
+      <em>© Photo, Inc. 2019. We love our users!</em>
+    </div>
+  </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
