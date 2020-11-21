@@ -1,23 +1,24 @@
-* {
-    margin: 0x;
-    padding: 0px;
-    box-sizing: border-box;
+body {
+    margin:0;
+    padding:0;
+    height: 100%;
 }
 
 nav{height: 77px; background: black;}
 nav div .navbar-brand{padding: 10px 56px;display:block;height: 77px;float: left;font-size: 30px; font-family: Comfortaa;color: aliceblue}
 nav ul li{float: left;height: 77px;padding: 20px 56px 14px;}
 nav ul li a{display:block;  color: aliceblue;font-size: 20px;} 
-#login {float:right;height: 77px;padding: 20px 0;}
-#screen{height: 597px;width: 1680px;object-fit:fill;clear: both;} 
+#login {float:right; height: 77px; padding: 20px 0;}
 
-footer{position: relative; width:1680px; height: 200px;text-align: center;}
-footer .nav {text-align: center;}
-footer .nav li { display:inline-block;}
-footer .nav >li{padding: 0 15px;}
-footer .nav >li:first-child{padding:0 15px 0 550px}
-footer .nav li::after{content: "";position: absolute;left: 0;top:0;width: 1px;height: 14px;background:#b2b2b2;}
-footer .nav li:first-child::after{display: none;}
+#maincontents {padding: 87px}
+
+footer{position: absolute; height: 100px; bottom:0; text-align: center;}
+footer .menu {text-align: center;}
+footer .menu li {display:inline-block;}
+footer .menu >li{padding: 0 15px;}
+footer .menu >li:first-child{padding:0 15px 0 550px}
+footer .menu li::after{content: "";position: absolute;left: 0;top:0;width: 1px;height: 14px;background:#b2b2b2;}
+footer .menu li:first-child::after{display: none;}
 footer .sns li{display: inline-block;}
 footer .sns li a{display: block;overflow: hidden;width: 44px;height: 44px;border-radius: 100%;}
 .icon1{background-image: url("twitter.PNG");}
