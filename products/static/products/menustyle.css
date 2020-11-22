@@ -76,6 +76,8 @@
 #content3{position: relative;height: 950px;background: #000000;}
 #content3 h1{ position: absolute; top:59px;Left:80px; color: #FFFFFF;font-family: Montserrat;font-size: 48px;}
 #content3 .btn_more{position: absolute;right:174px;top: 72px;}
+#content3 #btn_new{position: absolute;right: 100px;bottom: 100px;}
+#content3 #btn_new img {width:80px;height:80px;object-fit: cover;border-radius: 50%;border-color: #C4C4C4;}
 
     #content3 .imagesection3 input[id*="slide"] {display:none;}
     #content3 .imagesection3 .slidewrap {max-width: 1200px;padding: 0px;margin: 0;position:absolute;top:50%;left:50%;transform:translate(-50%,-40%)}
