@@ -24,13 +24,26 @@ def new(request):
 @login_required
 def create(request):
     user = request.user
-    body = request.POST['body']
+    comment = request.POST['comment']
+    brand = request.POST['brand']
+    productname = request.POST['productname']
+    price = request.POST['price']
+    site = request.POST['site']
+
+
+    producttype = request.POST['producttype']
+    category_m = request.POST['category_m']
+    style_m = request.POST['style_m']
+    color = request.POST['color']
+    season = request.POST['season']
+    rating = request.POST['rating']
+
     
     image = None
     if 'image' in request.FILES:
         image = request.FILES['image']
     
-    product = Product(user=user, body=body, image=image, created_at=timezone.now())
+    product = Product(user=user, category_m=category_m, comment=comment, brand=brand, productname=productname, price=price, site=site, image=image, producttype=producttype, style_m=style_m, color=color, season=season, rating=rating, created_at=timezone.now())
     product.save()
     return redirect('products:detail', product_id=product.id)
 
