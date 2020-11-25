@@ -3,37 +3,42 @@
 {% load static %}
 
 {% block style %}
-  <link rel="stylesheet" href="{% static 'products/style.css'%}" />
-  <link rel="stylesheet" href="{% static 'products/detailstyle.css'%}"/>
+<link rel="stylesheet" href="{% static 'products/detailstyle.css'%}"/>
 {% endblock %}
 
-{% block content %}
-<h1>Product Detail</h1>
 
+
+{% block content %}
+<div class="all-box">
+  <div class="left-box">
+    <h1>Product Detail</h1>
+    <div class="user-type">
+        <p><input readonly class="form-control-plaintext" type="text" name="author" id="author" value="{{ product.user.get_username }}" />님의<input readonly class="form-control-plaintext" type="text" id="producttype" name="producttype" value="{{ product.producttype }}" />
+        </p>
+    </div>
 
     {% if product.image %}
-<div class="left-box">
-  <div class="user-type">
-    <p><input readonly class="form-control-plaintext" type="text" name="author" id="author" value="{{ product.user.get_username }}" />님의<input readonly class="form-control-plaintext" type="text" id="producttype" name="producttype" value="{{ product.producttype }}" />
-    </p>
-  </div>
+    <img src="{{ product.image.url }}" alt="Product Image" />
+    {% endif %}
 
-  <img src="{{ product.image.url }}" alt="Product Image" />
-      
-  <div class="form-group">
-    <input readonly class="form-control-plaintext" type="text" id="category_m" name="category_m" value="{{ product.category_m }}" />
+    <div class="form-group">
+      <input readonly class="form-control-plaintext" type="text" id="category_m" name="category_m" value="{{ product.category_m }}" />
     </div>
-  <div class="form-group">
+
+    <div class="form-group">
       <input readonly class="form-control-plaintext" type="text" id="style_m" name="style_m" value="{{ product.style_m }}" />
     </div>
-   <div class="form-group">
+
+    <div class="form-group">
       <input readonly class="form-control-plaintext" type="text" id="color" name="color" value="{{ product.color }}" />
     </div>
-   <div class="form-group">
+
+    <div class="form-group">
       <input readonly class="form-control-plaintext" type="text" id="season" name="season" value="{{ product.season }}" />
+    </div>
   </div>
-</div>
-  {% endif %}
+
+  
 
 <div class="right-box">
     <div class="form-group">
@@ -53,22 +58,17 @@
       <input readonly class="form-control-plaintext" type="text" id="price" name="price" value="{{ product.price }}" />
     </div>
     
-
     <div>{{ product.created_at }}</div>
-    
     
     <div class="form-group">
       <label for="rating">별점</label>
       <input readonly class="form-control-plaintext" type="text" id="rating" name="rating" value="{{ product.rating }}" />
-      </div>
+    </div>
   
     <div class="form-group">
       <label for="comment">코멘트</label>
       <textarea readonly class="form-control-plaintext" id="comment" cols="15" rows="5" name="comment">{{ product.comment }}</textarea>
     </div>
-
-
-
 
     <div class="container">
     <a href="{{ product.site }}"><button type="submit" class="btn btn-primary">         Show more detail..         </button></a>  
@@ -77,10 +77,14 @@
     
     <div class="container">
     <a href="{% url 'products:menumain' %}">목록</a>
-    {% if user == product.user %}
+      {% if user == product.user %}
       <a href="{% url 'products:edit' product.id %}">수정하기</a>
       <a href="{% url 'products:delete' product.id %}">삭제하기</a>
-    {% endif %}
-  </div>  
+      {% endif %}
+    </div>  
+  
+
+  </div>
 </div>
+
 {% endblock %}

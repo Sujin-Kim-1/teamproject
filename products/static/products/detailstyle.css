@@ -1,36 +1,11 @@
-h1{
-    position: absolute;
-width: 500px;
-height: 11px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 50px;
-line-height: 61px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: left;
-letter-spacing: -0.015em;
-
-color: #070707;
+.all-box {
+    height: 1000px;
 }
+
 
 .left-box {
-    height: 20px;
     float: left;
     width: 50%;
-}
-
-#author {
-    color: #410404;
-    font-size: large;
-    font-weight: bold;
-}
-
-.user-type {
-    margin: 20px;
 }
 
 .right-box {
@@ -38,8 +13,49 @@ color: #070707;
     width: 50%;
 }
 
+
+h1{
+position: left;
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+display: flex;
+align-items: center;
+text-align: left;
+letter-spacing: -0.015em;
+color: #070707;
+}
+
+
+.user-type {
+    margin: 20px;
+}
+
+
+
+#author {
+    color: #410404;
+    font-size: large;
+    font-weight: bold;
+}
+
 #brand{ 
     font-weight: bold;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #020202;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+#comment{
+    border: 1px solid #330303;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 p1{
@@ -53,117 +69,6 @@ font-weight: bold;
 font-size: 30px;
 line-height: 37px;
 /* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #FFFFFF;
-}
-
-p2{
-    position: absolute;
-width: 122px;
-height: 37px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #FFFFFF;
-}
-
-p3{
-    position: absolute;
-width: 128px;
-height: 37px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #FFFFFF;
-}
-
-p4{
-    position: absolute;
-width: 98px;
-height: 37px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #DFD4C8;
-}
-
-#brand{
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-color: #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#comment{
-    border: 1px solid #330303;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
-p6{
-    position: absolute;
-width: 379px;
-height: 33px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #FFFFFF;
-
-opacity: 0.79;
-}
-
-#sitelink{
-    position: absolute;
-width: 379px;
-height: 33px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
 display: flex;
 align-items: center;
 text-align: center;
