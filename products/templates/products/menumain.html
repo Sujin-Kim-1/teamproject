@@ -15,65 +15,230 @@
     <div class="wrap">
       <h1 class="list_title">you might like..</h1>
       <button class="btn_more" type="submit">show more</button>
-    
-      <div class="recommendatiion">
-          <!-- <img class="recommend_main_cloth" src="{% static 'products/images/image 6.png' %}" alt="예시"> -->
+      
+      <div id="show">
+        <div class="imagesection1">
+          <input type="radio" name="slide" id="slide11" checked>
+          <input type="radio" name="slide" id="slide12">
+          <input type="radio" name="slide" id="slide13">
+         
+          <div class="slidewrap">
+            
+            <ul class="slidelist">
+              <!-- 슬라이드 영역 -->
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                    <h3>첫번째 슬라이드</h3>
+                  </div>
+                 </a>
+              </li>
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                    <h3>두번째 슬라이드</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                  <h3>세번째 슬라이드</h3>
+                  </div>
+                </a>
+                 
+                
+              </li class="slideitem">
         
-          <!-- <div class="recommend_cloth">1</div>
-          <div class="recommend_cloth">1</div>
-          <div class="recommend_cloth">1</div>
-          <div class="recommend_cloth">1</div>
-          <div class="recommend_cloth">1</div>
-          <div class="recommend_cloth">1</div> -->
+              <!-- 좌,우 슬라이드 버튼 -->
+              <div class="slide-control">
+                <div>
+                  <label for="slide13" class="left"></label>
+                  <label for="slide12" class="right"></label>
+                </div>
+                <div>
+                  <label for="slide11" class="left"></label>
+                  <label for="slide13" class="right"></label>
+                </div>
+                <div>
+                  <label for="slide12" class="left"></label>
+                  <label for="slide11" class="right"></label>
+                </div>
+              </div>
+        
+            </ul>
+            <!-- 페이징 -->
+            <ul class="slide-pagelist">
+              <li><label for="slide11"></label></li>
+              <li><label for="slide12"></label></li>
+              <li><label for="slide13"></label></li>
+            </ul>
+          </div>
+          
+        </div>
       </div>
-        
-      <a href="#a" class="next"><img src="{static 'products/images/btn_arrow_next.png'}" alt="다음추천"></a>
 
+     
       
     </div>  
   </div>
 
   
+</section> 
+<section>
   <div id="content2">
     <div>
       <h1 class="list_title">you are interested in..</h1>
       <button class="btn_more" type="submit">show more</button>
-      <!-- <div class="recommendation">
-        <img class="recommend_main_cloth" src="{% static 'products/maxmara.jpg' %}" alt="예시">
-        <div class="recommend_cloth">1</div>
-        <div class="recommend_cloth">1</div>
-        <div class="recommend_cloth">1</div>
-        <div class="recommend_cloth">1</div>
-        <div class="recommend_cloth">1</div>
-        <div class="recommend_cloth">1</div>
-        <a href="#a" class="next"><img src="{static 'products/images/btn_arrow_right.jpg'}" alt="다음추천"></a>
-      </div> -->
+      
+
+      <div id="show">
+        <div class="imagesection2">
+          <input type="radio" name="slide" id="slide21" checked>
+          <input type="radio" name="slide" id="slide22">
+          <input type="radio" name="slide" id="slide23">
+         
+          <div class="slidewrap">
+            
+            <ul class="slidelist">
+              <!-- 슬라이드 영역 -->
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                    <h3>첫번째 슬라이드</h3>
+                  </div>
+                 </a>
+              </li>
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                    <h3>두번째 슬라이드</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                  <h3>세번째 슬라이드</h3>
+                  </div>
+                </a>
+                 
+                
+              </li class="slideitem">
+        
+              <!-- 좌,우 슬라이드 버튼 -->
+              <div class="slide-control">
+                <div>
+                  <label for="slide23" class="left"></label>
+                  <label for="slide22" class="right"></label>
+                </div>
+                <div>
+                  <label for="slide21" class="left"></label>
+                  <label for="slide23" class="right"></label>
+                </div>
+                <div>
+                  <label for="slide22" class="left"></label>
+                  <label for="slide21" class="right"></label>
+                </div>
+              </div>
+        
+            </ul>
+            <!-- 페이징 -->
+            <ul class="slide-pagelist">
+              <li><label for="slide21"></label></li>
+              <li><label for="slide22"></label></li>
+              <li><label for="slide23"></label></li>
+            </ul>
+          </div>
+        </div>
+          
+      </div>
+  
+
     </div>
-    
+
+
+
+
   </div>
+</section>
+<section>    
   <div id="content3">
     <div>
       <h1 class="list_title">You already have..</h1>
       <button class="btn_more" type="submit">show more</button>
-      <!-- <div class="">
-        <img class="" src="{% static 'products/maxmara.jpg' %}" alt="예시">
-        <div class="">1</div>
-        <div class="">1</div>
-        <div class="">1</div>
-        <div class="">1</div>
-        <div class="">1</div>
-        <div class="">1</div>
-        <a href="#a" class=""><img src="{static 'products/images/btn_arrow_right.jpg'}" alt="다음추천"></a>
-      </div> -->
+
+      <div id="show">
+        <div class="imagesection3">
+          <input type="radio" name="slide" id="slide31" checked>
+          <input type="radio" name="slide" id="slide32">
+          <input type="radio" name="slide" id="slide33">
+         
+          <div class="slidewrap">
+            
+            <ul class="slidelist">
+              <!-- 슬라이드 영역 -->
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                    <h3>첫번째 슬라이드</h3>
+                  </div>
+                 </a>
+              </li>
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                    <h3>두번째 슬라이드</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="slideitem">
+                <a>
+                  <div class="textbox">
+                  <h3>세번째 슬라이드</h3>
+                  </div>
+                </a>
+                 
+                
+              </li class="slideitem">
+        
+              <!-- 좌,우 슬라이드 버튼 -->
+              <div class="slide-control">
+                <div>
+                  <label for="slide33" class="left"></label>
+                  <label for="slide32" class="right"></label>
+                </div>
+                <div>
+                  <label for="slide31" class="left"></label>
+                  <label for="slide33" class="right"></label>
+                </div>
+                <div>
+                  <label for="slide32" class="left"></label>
+                  <label for="slide31" class="right"></label>
+                </div>
+              </div>
+        
+            </ul>
+            <!-- 페이징 -->
+            <ul class="slide-pagelist">
+              <li><label for="slide31"></label></li>
+              <li><label for="slide32"></label></li>
+              <li><label for="slide33"></label></li>
+            </ul>
+          </div>
+        
+          
+        </div>
+  
+
+      </div>
+      <a href="{% url 'products:new' %}" id="btn_new"><img src="{% static 'products/images/new.png'%}"></a>
+     
     </div>
     
   </div>
+  
 </section>
 
-<a href="{% url 'products:new' %}">글  쓰  기</a>
-      
-</div>
-
-
-
 {% endblock %}
+      
