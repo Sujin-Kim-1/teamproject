@@ -2,12 +2,21 @@ from django.shortcuts import render, redirect
 from .models import Product
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+import os
+import urllib.request
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 def intro(request):
     return render(request, 'products/intro.html')
-    
+
+@login_required    
 def index(request):
+
     product = Product.objects.all()
     context = { 'product': product }
     return render(request, 'products/menumain.html', context)

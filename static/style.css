@@ -3,23 +3,38 @@
     padding: 0px;
     box-sizing: border-box;
 }
+header> div{height: 77px; background: black;position: relative;}
+header > div .navbar-brand{position: absolute;left: 0;top: 0; padding: 10px 56px;display:inline-block;height: 77px;font-size: 30px; font-family: Comfortaa;color: aliceblue}
+header nav{text-align: center;height: 77px;}
+header nav ul{display: inline-flex;list-style: none;color: aliceblue;}
+header nav ul li{width: 140px;height: 77px; font-size: 24px;padding: 15px 0px;background: black;}
+header nav ul li a{text-decoration: none;color: aliceblue;}
 
-nav{height: 77px; background: black;}
-nav div .navbar-brand{padding: 10px 56px;display:block;height: 77px;float: left;font-size: 30px; font-family: Comfortaa;color: aliceblue}
-nav ul li{float: left;height: 77px;padding: 20px 56px 14px;}
-nav ul li a{display:block;  color: aliceblue;font-size: 20px;} 
-#login {float:right;height: 77px;padding: 20px 0;}
-.wrap_image {text-align: center; background: grey;}
+.subnav{display: none;}
+header nav ul li:hover .subnav{display: block;position: absolute;margin-top: 16px;}
+header nav ul li:hover .subnav ul{display: block;margin: 10px;}
+header nav ul li:hover .subnav ul li{width: 160px;background:gray;border-bottom: 1px solid white;padding: 15px;font-size: 21px;text-align: left;}
+header nav ul li:hover .subnav ul li:last-child{border-bottom: none;}
+header nav ul li:hover .subnav ul li a:hover{color: aliceblue;text-decoration: none;}
+
+header nav #login {float:right;height: 77px;padding: 20px 0;}
+header nav #login .username{color: aliceblue;}
+
+
+
+
+
+.wrap_image {clear: both;height: 597px; text-align: center; background:url("./upperimage.jpg") ;}
 #screen{height: 597px;width: 1680px;object-fit:fill;clear: both;} 
 
 footer{position: relative;  height: 250px;text-align: center;margin: 0 auto;}
-footer .nav {position: absolute;left:50%;transform: translate(-50%);top: 10%;}
-footer .nav li { display:inline-block;position: relative; ;font: 24px Montserrat bold;}
-footer .nav >li{padding: 0 20px;}
-footer .nav li:after{content:"";position: absolute;left: 0;top:2.5px;width: 2px;height: 30px;background:#b2b2b2;}
-footer .nav li:first-child::after{display: none;}
+footer .informations {position: absolute;left:50%;transform: translate(-50%);top: 10%;}
+footer .informations li { display:inline-block;position: relative; ;font: 24px Montserrat bold;}
+footer .informations >li{padding: 0 20px;}
+footer .informations li:after{content:"";position: absolute;left: 0;top:2.5px;width: 2px;height: 30px;background:#b2b2b2;}
+footer .informations li:first-child::after{display: none;}
 footer .sns{padding: 60px 0 0;}
-footer .sns li{display: inline-block;}
-footer .sns li a{display: block;overflow: hidden;width: 50px;height: 50px;border-radius: 50%;object-fit: fill;}
+footer .sns li{display: inline-block;text-align:center}
+footer .sns li a{display: block;overflow: hidden;width: 70px;height: 70px;border-radius: 50%;object-fit: fill;}
 
 footer em{display: block;padding: 20px 0 0;font-size: 28.44px; color: #999;}

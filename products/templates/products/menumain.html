@@ -10,81 +10,7 @@
 
 {% block content %}
 
-<section>
-  <div id="content1">
-    <div class="wrap">
-      <h1 class="list_title">you might like..</h1>
-      <button class="btn_more" type="submit">show more</button>
-      
-      <div id="show">
-        <div class="imagesection1">
-          <input type="radio" name="slide" id="slide11" checked>
-          <input type="radio" name="slide" id="slide12">
-          <input type="radio" name="slide" id="slide13">
-         
-          <div class="slidewrap">
-            
-            <ul class="slidelist">
-              <!-- 슬라이드 영역 -->
-              <li class="slideitem">
-                <a>
-                  <div class="textbox">
-                    <h3>첫번째 슬라이드</h3>
-                  </div>
-                 </a>
-              </li>
-              <li class="slideitem">
-                <a>
-                  <div class="textbox">
-                    <h3>두번째 슬라이드</h3>
-                  </div>
-                </a>
-              </li>
-              <li class="slideitem">
-                <a>
-                  <div class="textbox">
-                  <h3>세번째 슬라이드</h3>
-                  </div>
-                </a>
-                 
-                
-              </li class="slideitem">
-        
-              <!-- 좌,우 슬라이드 버튼 -->
-              <div class="slide-control">
-                <div>
-                  <label for="slide13" class="left"></label>
-                  <label for="slide12" class="right"></label>
-                </div>
-                <div>
-                  <label for="slide11" class="left"></label>
-                  <label for="slide13" class="right"></label>
-                </div>
-                <div>
-                  <label for="slide12" class="left"></label>
-                  <label for="slide11" class="right"></label>
-                </div>
-              </div>
-        
-            </ul>
-            <!-- 페이징 -->
-            <ul class="slide-pagelist">
-              <li><label for="slide11"></label></li>
-              <li><label for="slide12"></label></li>
-              <li><label for="slide13"></label></li>
-            </ul>
-          </div>
-          
-        </div>
-      </div>
 
-     
-      
-    </div>  
-  </div>
-
-  
-</section> 
 <section>
   <div id="content2">
     <div>
@@ -105,21 +31,35 @@
               <li class="slideitem">
                 <a>
                   <div class="textbox">
-                    <h3>첫번째 슬라이드</h3>
+                    <!-- <h3>첫번째 슬라이드</h3> -->
+                    <div id="closet_box">
+                      {% if product %}
+                          {% for product in product %}
+                          
+                            {% if product.image %}
+                            <a id="closet" href="{% url 'products:detail' product.id %}"><img src="{{ product.image.url }}" alt="ProductImage" /></a>
+                            {% endif %}
+
+                          {% endfor %}
+                        
+                      {% else %}
+                        <p>No Posts.</p>
+                      {% endif %}
+                    </div>
                   </div>
                  </a>
               </li>
               <li class="slideitem">
                 <a>
                   <div class="textbox">
-                    <h3>두번째 슬라이드</h3>
+                    <!-- <h3>두번째 슬라이드</h3> -->
                   </div>
                 </a>
               </li>
               <li class="slideitem">
                 <a>
                   <div class="textbox">
-                  <h3>세번째 슬라이드</h3>
+                  <!-- <h3>세번째 슬라이드</h3> -->
                   </div>
                 </a>
                  
@@ -127,20 +67,7 @@
               </li class="slideitem">
         
               <!-- 좌,우 슬라이드 버튼 -->
-              <div class="slide-control">
-                <div>
-                  <label for="slide23" class="left"></label>
-                  <label for="slide22" class="right"></label>
-                </div>
-                <div>
-                  <label for="slide21" class="left"></label>
-                  <label for="slide23" class="right"></label>
-                </div>
-                <div>
-                  <label for="slide22" class="left"></label>
-                  <label for="slide21" class="right"></label>
-                </div>
-              </div>
+              
         
             </ul>
             <!-- 페이징 -->
@@ -181,42 +108,41 @@
               <li class="slideitem">
                 <a>
                   <div class="textbox">
-                    <h3>첫번째 슬라이드</h3>
+                    <div id="closet_box">
+                      {% if product %}
+                          {% for product in product %}
+                          
+                            {% if product.image %}
+                            <a id="closet" href="{% url 'products:detail' product.id %}"><img src="{{ product.image.url }}" alt="ProductImage" /></a>
+                            {% endif %}
+
+                          {% endfor %}
+                        
+                      {% else %}
+                        <p>No Posts.</p>
+                      {% endif %}
+                    </div>
                   </div>
                  </a>
               </li>
               <li class="slideitem">
                 <a>
                   <div class="textbox">
-                    <h3>두번째 슬라이드</h3>
+                    <!-- <h3>두번째 슬라이드</h3> -->
                   </div>
                 </a>
               </li>
               <li class="slideitem">
                 <a>
                   <div class="textbox">
-                  <h3>세번째 슬라이드</h3>
+                  <!-- <h3>세번째 슬라이드</h3> -->
                   </div>
                 </a>
                  
                 
               </li class="slideitem">
         
-              <!-- 좌,우 슬라이드 버튼 -->
-              <div class="slide-control">
-                <div>
-                  <label for="slide33" class="left"></label>
-                  <label for="slide32" class="right"></label>
-                </div>
-                <div>
-                  <label for="slide31" class="left"></label>
-                  <label for="slide33" class="right"></label>
-                </div>
-                <div>
-                  <label for="slide32" class="left"></label>
-                  <label for="slide31" class="right"></label>
-                </div>
-              </div>
+            
         
             </ul>
             <!-- 페이징 -->
@@ -239,6 +165,8 @@
   </div>
   
 </section>
+
+
 
 {% endblock %}
       

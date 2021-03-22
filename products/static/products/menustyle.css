@@ -6,7 +6,7 @@
     #content1 .imagesection1 input[id*="slide"] {display:none;}
     #content1 .imagesection1 .slidewrap {max-width: 1200px;padding: 0px;margin: 0;position:absolute;top:50%;left:50%;transform:translate(-50%,-40%)}
     #content1 .imagesection1 .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
-    #content1 .slidelist{width: 1200px;height: 650px;background:gray;vertical-align:middle;}
+    #content1 .slidelist{width: 1200px;height: 650px;background:black;vertical-align:middle;}
     #content1 .imagesection1 .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
     #content1 .imagesection1 .slidelist > li > a {display:block;position:relative;}
     #content1 .imagesection1 .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
@@ -42,7 +42,7 @@
     #content2 .imagesection2 input[id*="slide"] {display:none;}
 	#content2  .imagesection2 .slidewrap {max-width: 1200px;padding: 0px;margin: 0;position:absolute;top:50%;left:50%;transform:translate(-50%,-40%)}
 	#content2 .imagesection2 .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
-    #content2 .slidelist{width: 1200px;height: 650px;background:gray;vertical-align:middle;}
+    #content2 .slidelist{width: 1200px;height: 650px;background:#fff;vertical-align:middle;}
 	#content2 .imagesection2 .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
 	#content2 .imagesection2 .slidelist > li > a {display:block;position:relative;}
 	#content2 .imagesection2 .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
@@ -76,13 +76,13 @@
 #content3{position: relative;height: 950px;background: #000000;}
 #content3 h1{ position: absolute; top:59px;Left:80px; color: #FFFFFF;font-family: Montserrat;font-size: 48px;}
 #content3 .btn_more{position: absolute;right:174px;top: 72px;}
-#content3 #btn_new{position: absolute;right: 100px;bottom: 100px;}
+#content3 #btn_new{position: fixed;right: 100px;bottom: 100px;}
 #content3 #btn_new img {width:80px;height:80px;object-fit: cover;border-radius: 50%;border-color: #C4C4C4;}
 
     #content3 .imagesection3 input[id*="slide"] {display:none;}
     #content3 .imagesection3 .slidewrap {max-width: 1200px;padding: 0px;margin: 0;position:absolute;top:50%;left:50%;transform:translate(-50%,-40%)}
     #content3 .imagesection3 .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
-    #content3 .slidelist{width: 1200px;height: 650px;background:gray;vertical-align:middle;}
+    #content3 .slidelist{width: 1200px;height: 650px;background:black;vertical-align:middle;}
     #content3 .imagesection3 .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
     #content3 .imagesection3 .slidelist > li > a {display:block;position:relative;}
     #content3 .imagesection3 .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
@@ -108,3 +108,6 @@
     #content3 .imagesection3 input[id="slide31"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
     #content3 .imagesection3 input[id="slide32"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
     #content3 .imagesection3 input[id="slide33"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+    
+#closet_box{max-width:400px;max-height: 600px;position: absolute;top: 72px;left:0px;text-align:center}
+#closet{object-fit: cover;}
