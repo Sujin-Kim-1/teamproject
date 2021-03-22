@@ -1,0 +1,37 @@
+body {
+    height: 100vh;
+    background-image: url('images/closet.jpg');
+    background-repeat : no-repeat;
+    background-size : cover;
+  }
+
+.card {
+    float: left;
+}
+
+
+.allbutton {
+    display: inline-block;
+}
+
+.card-img-top {
+    height: 200px;
+}
+h1{
+    color: aliceblue;
+}
+
+.container {
+    position: relative;;
+    width: 1600px;
+    height: 720px;
+}
+
+.box {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    top: 30%;
+    left: 20%;
+    margin: auto;
+}
